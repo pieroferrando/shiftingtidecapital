@@ -5,37 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shifting Tide Capital</title>
   <meta name="description" content="Shifting Tide Capital" />
-  <!-- Favicon uses the same inline SVG rendered to a PNG; replace if you upload your own -->
-  <link rel="icon" href="favicon.png">
   <style>
-    html,body {height:100%}
-    body {
-      margin:0; display:grid; place-items:center; height:100%;
-      background: #fafafa;
-      font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+    /* Page = just the logo on the brand navy background */
+    :root {
+      --brand-navy: #0b1622; /* sampled from your logo background */
     }
-    .logo-wrap {text-align:center}
-    .brand {margin-top:14px; font-size:18px; letter-spacing:.2px; color:#111}
-    svg {width:128px; height:128px}
-    @media (prefers-color-scheme: dark) {
-      body { background: #0a0a0a; }
-      .brand { color:#f5f5f5; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: var(--brand-navy);
+      display: grid;
+      place-items: center;
+    }
+    img {
+      width: clamp(180px, 40vw, 520px);
+      height: auto;
+      display: block;
+      user-select: none;
+      -webkit-user-drag: none;
     }
   </style>
+  <!-- Optional favicon: drop a 512x512 PNG named favicon.png in the repo root -->
+  <link rel="icon" href="favicon.png">
 </head>
 <body>
-  <div class="logo-wrap" aria-label="Shifting Tide Capital">
-    <!-- Wave-in-circle logo (white circle, bold black waves) -->
-    <svg viewBox="0 0 200 200" role="img" aria-label="Shifting Tide Capital Logo">
-      <circle cx="100" cy="100" r="95" fill="white"/>
-      <path d="M20 120c20-30 40-30 60 0s40 30 60 0 40-30 60 0"
-            fill="none" stroke="black" stroke-width="12"
-            stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M20 145c20-25 40-25 60 0s40 25 60 0 40-25 60 0"
-            fill="none" stroke="black" stroke-opacity=".6" stroke-width="8"
-            stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    <div class="brand">Shifting Tide Capital</div>
-  </div>
+  <img src="logo.png" alt="Shifting Tide Capital">
 </body>
 </html>
